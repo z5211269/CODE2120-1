@@ -3,6 +3,8 @@ from django.views.decorators.csrf import csrf_exempt
 from django.http import HttpResponse, HttpResponseRedirect, JsonResponse
 import json
 from .models import *
+import os
+import sys
 
 # Create your views here.
 
@@ -26,7 +28,6 @@ def example_post(request):
 		try:
 			data = request.POST["data"]
 			jsob = json.loads(data)
-			
 			index = 0
 			for i in jsob["demo"]:
 				index += 1
