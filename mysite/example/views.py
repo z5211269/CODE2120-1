@@ -32,7 +32,7 @@ def example_post(request):
 			for i in jsob["demo"]:
 				index += 1
 
-			return JsonResponse({"count":index})
+			return JsonResponse({"TERESA":index})
 		except Exception as e:
 			exc_type, exc_obj, exc_tb = sys.exc_info()
 			other = sys.exc_info()[0].__name__
